@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Routes and views for the bottle application.
 """
@@ -29,7 +30,7 @@ def contact():
 def about():
     """Renders the about page."""
     return dict(
-        title='About',
-        message='Your application description page.',
+        title="О нас",
+        message="Предоставление аренды звукового и светового оборудования для ночных клубов",
         year=datetime.now().year
     )
