@@ -3,40 +3,77 @@ body {
     padding-bottom: 20px;
 }
 
-/* Set padding to keep content from hitting the edges */
+/* Устанавливаем отступы, чтобы контент не прижимался к краям */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
+/* Устанавливаем ширину для элементов формы, так как по умолчанию они занимают 100% ширины */
 input,
 select,
 textarea {
     max-width: 280px;
 }
 
-/* styles for validation helpers */
+/* Цвет фона */
+body {
+    background: linear-gradient(to right, #170E43, #ff00dc);
+    color: white;
+}
+
+/* Стили для сообщений об ошибках валидации */
 .field-validation-error {
-    color: #b94a48;
+    color: #b94a48; /* Красный цвет ошибки */
 }
 
+/* Скрываем сообщения, если ошибок нет */
 .field-validation-valid {
-    display: none;
+    display: none; 
 }
 
+/* Красная рамка для полей ввода с ошибкой */
 input.input-validation-error {
     border: 1px solid #b94a48;
 }
 
+/* Убираем рамку у чекбоксов с ошибкой */
 input[type="checkbox"].input-validation-error {
     border: 0 none;
 }
 
+/* Стили для списка ошибок валидации */
 .validation-summary-errors {
     color: #b94a48;
 }
 
+/* Скрываем сообщение, если ошибок нет */
 .validation-summary-valid {
     display: none;
+}
+
+/* Цвет navbar */
+.navbar-inverse {
+    background-color: #0F092C; 
+    border-color: #0F092C;
+}
+
+/* Цвет текста логотипа */
+.navbar-inverse .navbar-brand {
+    color: white; 
+}
+
+/* Цвет текста логотипа при наведении */
+.navbar-inverse .navbar-brand:hover {
+    color: #ff00dc; 
+}
+
+/* Цвет текста в navbar  */
+.navbar-inverse .navbar-nav > li > a {
+    color: white; 
+}
+
+/* Цвет текста в navbar при наведении */
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #ff00dc;
 }
