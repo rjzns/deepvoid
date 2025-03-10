@@ -1,4 +1,4 @@
-#!C:\Users\toriz\Документы\3 курс\ПО\laba2.1\deepvoid\env\Scripts\python.exe
+#!C:\Users\toriz\Документы\3 курс\ПО\laba2.1\deepvoid\env1\Scripts\python.exe
 # -*- coding: utf-8 -*-
 """
 Bottle is a fast and simple micro-framework for small web applications. It

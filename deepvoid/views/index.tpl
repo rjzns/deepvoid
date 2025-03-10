@@ -1,9 +1,9 @@
 % rebase('layout.tpl', title='Home Page', year=year)
 
 <div class="jumbotron">
-    <h1>Bottle</h1>
-    <p class="lead">Bottle is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://bottlepy.org/docs/dev/index.html" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+    <h1>DEEPV&Oslash;ID</h1>
+    <p class="lead"> DEEPV&Oslash;ID provides rental services for sound and lighting equipment for nightclubs. We are a team of professionals in event technical support.</p>
+    <p><a href="https://peterburg.center/ln/luchshie-nochnye-kluby-sankt-peterburga-top-10-night-and-strip-clubs-reyting-2019.html" class="btn btn-primary btn-large">Our clients &raquo;</a></p>
 </div>
 
 <div class="row">
