@@ -1,11 +1,13 @@
 % rebase('layout.tpl', title=title, year=year)
 
+<!DOCTYPE html>
+
 <h2>{{ title }}.</h2>
 <h3>{{ message }}</h3>
 
-<address>
-    
-</address>
+<div class="qwert">
+werty
+</div>
 
 <address>
     <strong>Post:</strong> <a href="mailto:info@soundpiter.ru">info@soundpiter.ru</a><br />
