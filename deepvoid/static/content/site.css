@@ -95,3 +95,46 @@ input[type="checkbox"].input-validation-error {
     border-color: #d600b8 !important;
     color: #fff !important;
 }
+
+/* Оконтовка текста заголовка */
+h1 {
+    color: white;
+    text-shadow: 0 0 5px #ff00dc, /* Мягкое внутреннее свечение */
+    0 0 10px #ff00dc, /* Средний слой */
+    0 0 20px #ff00dc, /* Более яркое свечение */
+    0 0 40px #ff00dc; /* Дальний эффект для глубины */
+}
+
+/* Темно-фиолетовый цвет текста для обычных кнопок*/
+.btn-default {
+    color: #0F092C !important; 
+}
+
+/* Оформление контейнера с отзывом */
+.testimonial {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    border-color: #ff00dc;
+    background-color: #0F092C;
+    margin: 10px 0;
+}
+/* Аватар авторов отзывов */
+.testimonial-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Текст отзыва */
+.testimonial-text {
+    font-style: italic;
+}
+
+/* Автор отзыва */
+.testimonial-author {
+    font-weight: bold;
+    margin-top: 10px;
+}

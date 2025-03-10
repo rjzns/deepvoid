@@ -8,22 +8,47 @@
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
+        <h2>Our Music Equipment</h2>
         <p>
-            Bottle gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+            We provide only the newest equipment with the highest sound quality.
         </p>
-        <p><a class="btn btn-default" href="http://bottlepy.org/docs/dev/index.html">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" href="https://www.pult.ru/product/professionalnaya-akustika/?srsltid=AfmBOop6ILdWE7ZJwHMISpCHVDPZKIUoqAeU37C9OqduuluqWg3PUGqa">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>The Python Package Index is a repository of software for the Python programming language.</p>
-        <p><a class="btn btn-default" href="https://pypi.python.org/pypi">Learn more &raquo;</a></p>
+        <h2>Our Lighting Equipment</h2>
+        <p>With our spotlights, your club will shine in new colors, ensuring impeccable lighting for your event.</p>
+        <p><a class="btn btn-default" href="https://spb.muzmart.com/catalog/78-svetovoe-oborudovanie">Learn more &raquo;</a></p>
     </div>
     <div class="col-md-4">
-        <h2>Microsoft Azure</h2>
-        <p>You can easily publish to Microsoft Azure using Visual Studio. Find out how you can host your application using a free trial today.</p>
-        <p><a class="btn btn-default" href="http://azure.microsoft.com">Learn more &raquo;</a></p>
+        <h2>Our DJs</h2>
+        <p>The best electronic musicians will help create the perfect atmosphere at your venue, making your event unforgettable.</p>
+        <p><a class="btn btn-default" href="https://st-peterburg.artist.ru/Dj/">Learn more &raquo;</a></p>
+    </div>
+</div>
+
+<div class="container">
+    <h2>What Our Clients Say</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="testimonial">
+                <img src="/static/images/user_avatar.png" alt="Client 1" class="testimonial-avatar">
+                <p class="testimonial-text">"Amazing sound quality! Our event was a success thanks to DEEPV&Oslash;ID."</p>
+                <p class="testimonial-author">- Alex Johnson, Club Manager</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="testimonial">
+                <img src="/static/images/user_avatar.png" alt="Client 2" class="testimonial-avatar">
+                <p class="testimonial-text">"The lighting effects were stunning! Totally transformed our venue."</p>
+                <p class="testimonial-author">- Maria Lopez, Event Organizer</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="testimonial">
+                <img src="/static/images/user_avatar.png" alt="Client 3" class="testimonial-avatar">
+                <p class="testimonial-text">"Professional service and top-notch equipment. Highly recommend!"</p>
+                <p class="testimonial-author">- James Carter, DJ</p>
+            </div>
+        </div>
     </div>
 </div>
