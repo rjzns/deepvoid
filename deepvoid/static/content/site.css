@@ -77,3 +77,21 @@ input[type="checkbox"].input-validation-error {
 .navbar-inverse .navbar-nav > li > a:hover {
     color: #ff00dc;
 }
+
+/* ÷вет фона дл€ контейнера на главной странице */
+.jumbotron {
+    background-color: #0F092C; 
+}
+
+/* ÷вет кнопки */
+.btn-primary {
+    background-color: #ff00dc !important; 
+    border-color: #ff00dc !important;
+    color: #fff !important;
+}
+
+.btn-primary:hover {
+    background-color: #d600b8 !important; /* „уть темнее при наведени€ */
+    border-color: #d600b8 !important;
+    color: #fff !important;
+}
