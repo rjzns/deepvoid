@@ -3,117 +3,114 @@ body {
     padding-bottom: 20px;
 }
 
-/* Óñòàíàâëèâàåì îòñòóïû, ÷òîáû êîíòåíò íå ïðèæèìàëñÿ ê êðàÿì */
+/* Устанавливаем отступы, чтобы контент не прижимался к краям */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
 }
 
-/* Óñòàíàâëèâàåì øèðèíó äëÿ ýëåìåíòîâ ôîðìû, òàê êàê ïî óìîë÷àíèþ îíè çàíèìàþò 100% øèðèíû */
+/* Устанавливаем ширину для элементов формы, так как по умолчанию они занимают 100% ширины */
 input,
 select,
 textarea {
     max-width: 280px;
 }
 
-/* Öâåò ôîíà */
+/* Цвет фона */
 body {
     background: linear-gradient(to right, #170E43, #ff00dc);
     color: white;
 }
 
-/* Ñòèëè äëÿ ñîîáùåíèé îá îøèáêàõ âàëèäàöèè */
+/* Стили для сообщений об ошибках валидации */
 .field-validation-error {
-    color: #b94a48; /* Êðàñíûé öâåò îøèáêè */
+    color: #b94a48; /* Красный цвет ошибки */
 }
 
-/* Ñêðûâàåì ñîîáùåíèÿ, åñëè îøèáîê íåò */
+/* Скрываем сообщения, если ошибок нет */
 .field-validation-valid {
-    display: none; 
+    display: none;
 }
 
-/* Êðàñíàÿ ðàìêà äëÿ ïîëåé ââîäà ñ îøèáêîé */
+/* Красная рамка для полей ввода с ошибкой */
 input.input-validation-error {
     border: 1px solid #b94a48;
 }
 
-/* Óáèðàåì ðàìêó ó ÷åêáîêñîâ ñ îøèáêîé */
+/* Убираем рамку у чекбоксов с ошибкой */
 input[type="checkbox"].input-validation-error {
     border: 0 none;
 }
 
-/* Ñòèëè äëÿ ñïèñêà îøèáîê âàëèäàöèè */
+/* Стили для списка ошибок валидации */
 .validation-summary-errors {
     color: #b94a48;
 }
 
-/* Ñêðûâàåì ñîîáùåíèå, åñëè îøèáîê íåò */
+/* Скрываем сообщение, если ошибок нет */
 .validation-summary-valid {
     display: none;
 }
 
-/* Öâåò navbar */
+/* Цвет navbar */
 .navbar-inverse {
-    background-color: #0F092C; 
+    background-color: #0F092C;
     border-color: #0F092C;
 }
 
-/* Öâåò òåêñòà ëîãîòèïà */
-.navbar-inverse .navbar-brand {
-    color: white; 
-}
+    /* Цвет текста логотипа */
+    .navbar-inverse .navbar-brand {
+        color: white;
+    }
 
-/* Öâåò òåêñòà ëîãîòèïà ïðè íàâåäåíèè */
-.navbar-inverse .navbar-brand:hover {
-    color: #ff00dc; 
-}
+        /* Цвет текста логотипа при наведении */
+        .navbar-inverse .navbar-brand:hover {
+            color: #ff00dc;
+        }
 
-/* Öâåò òåêñòà â navbar  */
-.navbar-inverse .navbar-nav > li > a {
-    color: white; 
-}
+    /* Цвет текста в navbar  */
+    .navbar-inverse .navbar-nav > li > a {
+        color: white;
+    }
 
-/* Öâåò òåêñòà â navbar ïðè íàâåäåíèè */
-.navbar-inverse .navbar-nav > li > a:hover {
-    color: #ff00dc;
-}
+        /* Цвет текста в navbar при наведении */
+        .navbar-inverse .navbar-nav > li > a:hover {
+            color: #ff00dc;
+        }
 
-.qwert {
-    color: #ff00dc;
-
-/* Öâåò ôîíà äëÿ êîíòåéíåðà íà ãëàâíîé ñòðàíèöå */
+/* Цвет фона для контейнера на главной странице */
 .jumbotron {
-    background-color: #0F092C; 
+    background-color: #0F092C;
 }
 
-/* Öâåò êíîïêè */
+/* Цвет кнопки */
 .btn-primary {
-    background-color: #ff00dc !important; 
+    background-color: #ff00dc !important;
     border-color: #ff00dc !important;
     color: #fff !important;
 }
 
-.btn-primary:hover {
-    background-color: #d600b8 !important; /* ×óòü òåìíåå ïðè íàâåäåíèÿ */
-    border-color: #d600b8 !important;
-    color: #fff !important;
-}
+    .btn-primary:hover {
+        background-color: #d600b8 !important; /* Чуть темнее при наведения */
+        border-color: #d600b8 !important;
+        color: #fff !important;
+    }
 
-/* Îêîíòîâêà òåêñòà çàãîëîâêà */
+/* Оконтовка текста заголовка */
 h1 {
     color: white;
-    text-shadow: 0 0 5px #ff00dc, /* Ìÿãêîå âíóòðåííåå ñâå÷åíèå */
-    0 0 10px #ff00dc, /* Ñðåäíèé ñëîé */
-    0 0 20px #ff00dc, /* Áîëåå ÿðêîå ñâå÷åíèå */
-    0 0 40px #ff00dc; /* Äàëüíèé ýôôåêò äëÿ ãëóáèíû */
+    text-shadow: 0 0 5px #ff00dc, /* Мягкое внутреннее свечение */
+    0 0 10px #ff00dc, /* Средний слой */
+    0 0 20px #ff00dc, /* Более яркое свечение */
+    0 0 40px #ff00dc; /* Дальний эффект для глубины */
 }
 
-/* Òåìíî-ôèîëåòîâûé öâåò òåêñòà äëÿ îáû÷íûõ êíîïîê*/
+/* Темно-фиолетовый цвет текста для обычных кнопок*/
 .btn-default {
-    color: #0F092C !important; 
+    color: #0F092C !important;
 }
 
-/* Îôîðìëåíèå êîíòåéíåðà ñ îòçûâîì */
+/* Оформление контейнера с отзывом */
 .testimonial {
     text-align: center;
     padding: 20px;
@@ -123,7 +120,7 @@ h1 {
     background-color: #0F092C;
     margin: 10px 0;
 }
-/* Àâàòàð àâòîðîâ îòçûâîâ */
+/* Аватар авторов отзывов */
 .testimonial-avatar {
     width: 80px;
     height: 80px;
@@ -131,14 +128,13 @@ h1 {
     margin-bottom: 10px;
 }
 
-/* Òåêñò îòçûâà */
+/* Текст отзыва */
 .testimonial-text {
     font-style: italic;
 }
 
-/* Àâòîð îòçûâà */
+/* Автор отзыва */
 .testimonial-author {
     font-weight: bold;
     margin-top: 10px;
-
 }
