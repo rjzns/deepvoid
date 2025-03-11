@@ -51,6 +51,8 @@
     <Content Include="static\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="static\images\pn1.png" />
     <Content Include="static\images\pn2.png" />
+    <Content Include="static\images\pn3.png" />
+    <Content Include="static\images\pn4.png" />
     <Content Include="static\images\user_avatar.png" />
     <Content Include="static\images\иконка.png" />
     <Content Include="static\images\обложка.png" />
