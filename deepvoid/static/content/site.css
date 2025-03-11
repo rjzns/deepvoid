@@ -52,6 +52,12 @@ input[type="checkbox"].input-validation-error {
     display: none;
 }
 
+.navbar {
+    max-height: 50px; /* Уменьшаем высоту */
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 /* Цвет navbar */
 .navbar-inverse {
     background-color: #0F092C;
@@ -80,7 +86,7 @@ input[type="checkbox"].input-validation-error {
 
 /* Цвет фона для контейнера на главной странице */
 .jumbotron {
-    background-color: #0F092C;
+    background-color: rgba(15, 9, 44, 0.8);
 }
 
 /* Цвет кнопки */
