@@ -169,7 +169,69 @@ h1 {
     transform: scale(1.1);
 }
 
-h2{
+.h2_serv{
     text-align:center;
     font-size: 45px;
 }
+
+/* Контейнер с услугой */
+.testimonial-wrapper {
+    display: flex; /* включаем flex режим */
+    justify-content: space-between; /* пространство между блоками */
+    gap: 20px; /* можно добавить пробел между ними */
+}
+
+.testimonial1 {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    border-color: #ff00dc;
+    background-color: #0F092C;
+    margin: 10px 0;
+    flex: 1; /* чтобы оба занимали равное пространство */
+    max-width: 48%; /* или фиксированную ширину, как хочешь */
+    box-sizing: border-box; /* чтобы паддинги не ломали ширину */
+}
+
+.testimonial1:hover {
+    transform: scale(1.02); /* Немного увеличивается при наведении */
+    box-shadow: 0 0 30px rgba(255, 0, 220, 0.7); /* Тень ярче */
+}
+
+/* Заголовок услуги */
+.testimonial-title1 {
+    font-size: 28px;
+    color: #ff00dc;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Текст услуги */
+.testimonial-text1 {
+    font-style: normal; /* Без италиков для текста */
+    font-size: 16px;
+    line-height: 1.6; /* Для удобства чтения */
+    text-align: justify; /* Выровнять по краям */
+    margin-bottom: 15px;
+}
+
+.container {
+    margin-bottom: 50px; /* Воздух снизу */
+}
+
+/* Цвет кнопки */
+.btn-primary1 {
+    font-size: 20px;
+    width: 300px;
+    background-color: #ff00dc !important;
+    border-color: #ff00dc !important;
+    color: #fff !important;
+}
+
+.btn-primary1:hover {
+    background-color: #d600b8 !important; /* Чуть темнее при наведения */
+    border-color: #d600b8 !important;
+    color: #fff !important;
+}
+
