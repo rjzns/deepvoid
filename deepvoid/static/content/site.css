@@ -138,3 +138,38 @@ h1 {
     font-weight: bold;
     margin-top: 10px;
 }
+
+/*//////////////////////////// VIKA EVIL //////////////////////////////////////*/
+
+/*Цвета для услуг*/
+.highlight {
+    color: #ff00dc;
+    font-weight: bold;
+}
+
+/* Фотки */
+.gallery-container {
+    display: flex;
+    justify-content: center; /* Центрируем */
+    flex-wrap: wrap; /* Если не влазит, переносим */
+    gap: 10px; /* Отступы между фотками */
+
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.gallery-container img {
+    width: 12%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.1);
+}
+
+h2{
+    text-align:center;
+    font-size: 45px;
+}
