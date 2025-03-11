@@ -23,11 +23,11 @@
     <div class="gallery-container">
     <img src="/static/images/pn1.png" alt="Photo 1">
     <img src="/static/images/pn2.png" alt="Photo 2">
-    <img src="/static/images/pn2.jpg" alt="Photo 3">
-    <img src="/static/images/pn2.jpg" alt="Photo 4">
-    <img src="/static/images/pn2.jpg" alt="Photo 5">
-    <img src="/static/images/pn2.jpg" alt="Photo 6">
-    <img src="/static/images/pn2.jpg" alt="Photo 7">
+    <img src="/static/images/pn3.png" alt="Photo 3">
+    <img src="/static/images/pn4.png" alt="Photo 4">
+    <img src="/static/images/pn5.png" alt="Photo 5">
+    <img src="/static/images/pn6.png" alt="Photo 6">
+    <img src="/static/images/pn7.png" alt="Photo 7">
 </div>
 
 <div class="testimonial-wrapper">
