@@ -1,5 +1,6 @@
 % rebase('layout.tpl', title=title, year=year)
 
+
 <div class="jumbotron">
     <h1>SERVICES</h1>
     <p class="lead">
