@@ -60,8 +60,3 @@
 </div>
 
 
-
-<address>
-    <strong>Post:</strong> <a href="mailto:info@deepv0id.ru">info@deepv0id.ru</a><br />
-    <strong>Phone</strong> <a href="tel:+79118320488">+7 (911) 832-04-88</a>
-</address>
