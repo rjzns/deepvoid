@@ -1,5 +1,6 @@
 % rebase('layout.tpl', title=title, year=year)
 
+
 <div class="jumbotron">
     <h1>SERVICES</h1>
     <p class="lead">
@@ -45,9 +46,3 @@
             </div>
         </div>
     </div>
-</div>
-
-<address>
-    <strong>Post:</strong> <a href="mailto:info@deepv0id.ru">info@deepv0id.ru</a><br />
-    <strong>Phone</strong> <a href="tel:+79118320488">+7 (911) 832-04-88</a>
-</address>
