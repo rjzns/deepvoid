@@ -53,6 +53,9 @@
     <Content Include="static\images\pn2.png" />
     <Content Include="static\images\pn3.png" />
     <Content Include="static\images\pn4.png" />
+    <Content Include="static\images\pn5.png" />
+    <Content Include="static\images\pn6.png" />
+    <Content Include="static\images\pn7.png" />
     <Content Include="static\images\user_avatar.png" />
     <Content Include="static\images\иконка.png" />
     <Content Include="static\images\обложка.png" />
