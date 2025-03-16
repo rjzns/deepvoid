@@ -21,7 +21,7 @@ def contact():
     """Renders the contact page."""
     return dict(
         title='Services',
-        message='Наши услуги совсем скоро',
+        message='Наши услуги',
         year=datetime.now().year
     )
 
