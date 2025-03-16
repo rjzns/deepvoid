@@ -71,7 +71,7 @@ input[type="checkbox"].input-validation-error {
 color: white;
 }
 
-/* Цвет текста логотипа при наведении */
+    /* Цвет текста логотипа при наведении */
     .navbar-inverse .navbar-brand:hover {
         color: white;
         text-shadow: 0 0 5px #ff00dc, /* Мягкое внутреннее свечение */
@@ -85,7 +85,7 @@ color: white;
 color: white;
 }
 
-/* Цвет текста в navbar при наведении */
+    /* Цвет текста в navbar при наведении */
     .navbar-inverse .navbar-nav > li > a:hover {
         color: white;
         text-shadow: 0 0 5px #ff00dc, /* Мягкое внутреннее свечение */
@@ -106,8 +106,9 @@ color: white;
     color: #fff;
 }
 
+    /* При наведения */
     .btn-primary:hover {
-        background-color: #ff3ce6; /* При наведения */
+        background-color: #ff3ce6; 
         border-color: #ff00dc;
         color: #fff;
     }
@@ -133,7 +134,7 @@ h1 {
     border: 1px solid #ddd;
     border-radius: 10px;
     border-color: #ff00dc;
-    background-color: rgba(15, 9, 44, 0.8);
+    background-color: rgba(15, 9, 44, 0.6);
     margin: 10px 0;
 }
 
@@ -263,7 +264,7 @@ h1 {
     border: 1px solid #ddd;
     border-radius: 10px;
     border-color: #ff00dc;
-    background-color: rgba(15, 9, 44, 0.8);
+    background-color: rgba(15, 9, 44, 0.6);
     margin: 10px 0;
     flex: 1; /* Равномерное распределение ширины */
     max-width: 48%; /* Определённая ширина */
@@ -302,3 +303,83 @@ h1 {
 .h3_serv {
     text-align: center;
 }
+
+/* Контейнер с блоками концертов */
+.row-about {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; /* Расстояние между блоками */
+    flex-wrap: wrap; /* Позволит перенос, если экран маленький */
+}
+
+/* Стили для каждого блока с информацией о концерте */
+.col-proud {
+    flex: 1; /* Равномерное распределение ширины */
+    max-width: 30%; /* Чтобы не сжималось слишком сильно */
+    text-align: center;
+    margin: 10px;
+}
+
+    /* Отступы картинок */
+    .col-proud img {
+        margin-bottom: 20px;
+        width: 300px;
+    }
+
+/* Оформление контейнера с концертами */
+.concert {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    border-color: #ff00dc;
+    background-color: rgba(15, 9, 44, 0.6);
+    width: 360px;
+    flex-grow: 1;
+}
+
+/* Оформление контейнера с создательницами */
+.creator {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    border-color: #ff00dc;
+    background-color: rgba(15, 9, 44, 0.6);
+    width: 360px;
+    flex-grow: 1;
+}
+
+    /* Оформление аватаров создательниц */
+    .creator img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+/* Контейнер галереи */
+.work-with {
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    flex-wrap: wrap; /* Перенос элементов при нехватке места */
+    gap: 20px; /* Расстояние между изображениями */
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+    /* Ссылка внутри галлереи */
+    .work-with a {
+        display: block;
+        width: 150px;
+    }
+
+    /* Оформление изображения */
+    .work-with img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Заполнение всего блока */
+        border-radius: 10px; /* Скругление углов */
+        transition: transform 0.3s; /* Плавное изменение масштаба */
+    }
