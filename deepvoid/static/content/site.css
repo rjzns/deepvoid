@@ -101,16 +101,16 @@ color: white;
 
 /* Цвет кнопки */
 .btn-primary {
-    background-color: #ff00dc;
-    border-color: #ff00dc;
-    color: #fff;
+    background-color: #ff00dc !important;
+    border-color: #ff00dc !important;
+    color: #fff !important;
 }
 
     /* При наведения */
     .btn-primary:hover {
-        background-color: #ff3ce6; 
-        border-color: #ff00dc;
-        color: #fff;
+        background-color: #ff3ce6 !important;
+        border-color: #ff00dc !important;
+        color: #fff !important;
     }
 
 /* Оконтовка текста заголовка */
