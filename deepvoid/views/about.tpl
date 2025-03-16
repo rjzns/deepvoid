@@ -57,7 +57,7 @@
     </div>
     <div class="col-proud">
         <div class="creator">
-            <img src="/static/images/erya.jpg">
+            <img src="/static/images/anya.jpg">
             <h2>Yakovleva Anna Sergeevna</h2>
             <p>
                 The creator of the idea, accountant, planner.
@@ -69,7 +69,7 @@
     </div>
     <div class="col-proud">
         <div class="creator">
-            <img src="/static/images/erya.jpg">
+            <img src="/static/images/vito.jpg">
             <h2>Zolina Viktoriya Alekseevna</h2>
             <p>
                 Responsible for the supply of equipment.
