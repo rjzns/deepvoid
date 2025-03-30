@@ -31,21 +31,21 @@
     <div class="row">
         <div class="col-md-4">
             <div class="testimonial">
-                <img src="/static/images/user_avatar.png" alt="Client 1" class="testimonial-avatar">
+                <img src="/static/images/review_1.png" alt="Client 1" class="testimonial-avatar">
                 <p class="testimonial-text">"Amazing sound quality! Our event was a success thanks to DEEPV&Oslash;ID."</p>
                 <p class="testimonial-author">- Alex Johnson, Club Manager</p>
             </div>
         </div>
         <div class="col-md-4">
             <div class="testimonial">
-                <img src="/static/images/user_avatar.png" alt="Client 2" class="testimonial-avatar">
+                <img src="/static/images/review_3.png" alt="Client 2" class="testimonial-avatar">
                 <p class="testimonial-text">"The lighting effects were stunning! Totally transformed our venue."</p>
                 <p class="testimonial-author">- Maria Lopez, Event Organizer</p>
             </div>
         </div>
         <div class="col-md-4">
             <div class="testimonial">
-                <img src="/static/images/user_avatar.png" alt="Client 3" class="testimonial-avatar">
+                <img src="/static/images/review_2.png" alt="Client 3" class="testimonial-avatar">
                 <p class="testimonial-text">"Professional service and top-notch equipment. Highly recommend!"</p>
                 <p class="testimonial-author">- James Carter, DJ</p>
             </div>
