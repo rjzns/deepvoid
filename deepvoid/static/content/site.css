@@ -383,3 +383,76 @@ h1 {
         border-radius: 10px; /* Скругление углов */
         transition: transform 0.3s; /* Плавное изменение масштаба */
     }
+
+/* Офрмление таблицы */
+.table-container {
+    max-height: 300px; /* Фиксированная высота таблицы */
+    overflow-y: auto; /* Вертикальная прокрутка */
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(15, 9, 44, 0.8); /* Фон с прозрачностью */
+    border-radius: 10px; /* Скругленные углы */
+    overflow: hidden; /* Для корректного отображения скругленных углов */
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: none; /* Прозрачные границы */
+    color: #fff; /* Белый текст для читаемости */
+}
+
+th {
+    background: rgba(15, 9, 44, 0.8); /* Чуть темнее фон для заголовков */
+    position: sticky;
+    top: 0; /* Фиксация заголовков при прокрутке */
+    z-index: 1;
+}
+
+/* Стили для скроллбара */
+.table-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: rgba(15, 9, 44, 0.3);
+    border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+/* Выделение ссылки */
+.article-link {
+    color: #fff; /* Белый цвет для ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+    .article-link:hover {
+        color: #fff; /* Белый цвет при наведении */
+        text-shadow: 0 0 5px #ff00dc, /* Мягкое внутреннее свечение */
+        0 0 10px #ff00dc, /* Средний слой */
+        0 0 20px #ff00dc, /* Более яркое свечение */
+        0 0 40px #ff00dc; /* Дальний эффект для глубины */
+        text-decoration: none !important; /* Явно убираем подчеркивание при наведении */
+    }
+
+    /* Эффект для посещённых ссылок */
+    .article-link:visited {
+        color: #fff !important;
+        text-shadow: 0 0 3px rgba(255, 0, 220, 0.4); /* Лёгкое свечение при нажатии */
+        text-decoration: none !important;
+    }
+
+    /* Стиль для состояния при нажатии */
+    .article-link:active {
+        color: #fff !important;
+        text-shadow: 0 0 3px rgba(255, 0, 220, 0.4); /* Лёгкое свечение при нажатии */
+        text-decoration: none !important; /* Убираем подчеркивание */
+    }

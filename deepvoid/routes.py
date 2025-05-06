@@ -34,3 +34,11 @@ def about():
         message="Предоставление аренды звукового и светового оборудования для ночных клубов",
         year=datetime.now().year
     )
+@route('/articles')
+@view('articles')
+def articles():
+    """Renders the articles page."""
+    return dict(
+        title="Полезные статьи",
+        year=datetime.now().year
+    )

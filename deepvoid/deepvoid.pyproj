@@ -38,6 +38,7 @@
     <Folder Include="static\content\" />
     <Folder Include="static\fonts\" />
     <Folder Include="static\images\" />
+    <Folder Include="static\texts\" />
     <Folder Include="static\scripts\" />
     <Folder Include="views\" />
   </ItemGroup>
@@ -75,7 +76,13 @@
     <Content Include="static\scripts\respond.js" />
     <Content Include="static\scripts\respond.min.js" />
     <Content Include="static\scripts\_references.js" />
+    <Content Include="static\texts\articles.json">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\about.tpl" />
+    <Content Include="views\articles.tpl">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\service.tpl" />
     <Content Include="views\index.tpl" />
     <Content Include="views\layout.tpl" />
