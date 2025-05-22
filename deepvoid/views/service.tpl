@@ -2,7 +2,7 @@
 
 
 <div class="jumbotron">
-    <h1>SERVICES</h1>
+    <h1>Services</h1>
     <p class="lead">
         We offer for rent the whole range of equipment for events -
         <span class="highlight">sound</span>,
@@ -29,7 +29,7 @@
         <a href="https://www.soundpiter.ru/service/stage.html"><img src="/static/images/pn6.png" alt="Photo 6"></a>
     </div>
 
-    <h3 class="h3_serv">Choose the equipment you like :)</h3>
+    <h3 class="h3_serv">Choose the equipment you need :)</h3>
 </div>
 
 <div class="testimonial-wrapper">
@@ -44,7 +44,7 @@
                 If you are not strong in decibel calculations, do not know how to connect an amplifier to a mixer and simply do not have the skills to work with equipment, 
                 the turnkey event technical support service is your option.
             </p>
-            <a href="https://www.soundpiter.ru/service.html" class="btn btn-primary1 mt-5">Order</a>
+            <a href="https://www.soundpiter.ru/service.html" class="btn btn-primary mt-5">Order</a>
     </div>
 
     <div class="testimonial1">
@@ -57,7 +57,7 @@
             <p class="testimonial-text1">
                 Since pick-up does not involve delivery and support by our employees, we do not issue expensive equipment or devices in large quantities.
             </p>
-            <a href="https://www.soundpiter.ru/service.html" class="btn btn-primary1 mt-5">Order</a>
+            <a href="https://www.soundpiter.ru/service.html" class="btn btn-primary mt-5">Order</a>
     </div>
 </div>
 

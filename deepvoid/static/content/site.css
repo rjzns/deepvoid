@@ -1,15 +1,16 @@
+/* Тело */
 body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
 
-/* Устанавливаем отступы, чтобы контент не прижимался к краям */
+/* Отступы, чтобы контент не прижимался к краям */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
 }
 
-/* Устанавливаем ширину для элементов формы, так как по умолчанию они занимают 100% ширины */
+/* Ширина для элементов формы */
 input,
 select,
 textarea {
@@ -52,8 +53,9 @@ input[type="checkbox"].input-validation-error {
     display: none;
 }
 
+/* Высота */
 .navbar {
-    max-height: 50px; /* Уменьшаем высоту */
+    max-height: 50px; 
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -64,25 +66,33 @@ input[type="checkbox"].input-validation-error {
     border-color: #0F092C;
 }
 
-    /* Цвет текста логотипа */
-    .navbar-inverse .navbar-brand {
+/* Цвет текста логотипа */
+.navbar-inverse .navbar-brand {
+color: white;
+}
+
+    /* Цвет текста логотипа при наведении */
+    .navbar-inverse .navbar-brand:hover {
         color: white;
+        text-shadow: 0 0 5px #ff00dc, /* Мягкое внутреннее свечение */
+        0 0 10px #ff00dc, /* Средний слой */
+        0 0 20px #ff00dc, /* Более яркое свечение */
+        0 0 40px #ff00dc; /* Дальний эффект для глубины */
     }
 
-        /* Цвет текста логотипа при наведении */
-        .navbar-inverse .navbar-brand:hover {
-            color: #ff00dc;
-        }
+/* Цвет текста в navbar  */
+.navbar-inverse .navbar-nav > li > a {
+color: white;
+}
 
-    /* Цвет текста в navbar  */
-    .navbar-inverse .navbar-nav > li > a {
+    /* Цвет текста в navbar при наведении */
+    .navbar-inverse .navbar-nav > li > a:hover {
         color: white;
+        text-shadow: 0 0 5px #ff00dc, /* Мягкое внутреннее свечение */
+        0 0 10px #ff00dc, /* Средний слой */
+        0 0 20px #ff00dc, /* Более яркое свечение */
+        0 0 40px #ff00dc; /* Дальний эффект для глубины */
     }
-
-        /* Цвет текста в navbar при наведении */
-        .navbar-inverse .navbar-nav > li > a:hover {
-            color: #ff00dc;
-        }
 
 /* Цвет фона для контейнера на главной странице */
 .jumbotron {
@@ -96,9 +106,10 @@ input[type="checkbox"].input-validation-error {
     color: #fff !important;
 }
 
+    /* При наведения */
     .btn-primary:hover {
-        background-color: #d600b8 !important; /* Чуть темнее при наведения */
-        border-color: #d600b8 !important;
+        background-color: #ff3ce6 !important;
+        border-color: #ff00dc !important;
         color: #fff !important;
     }
 
@@ -111,21 +122,22 @@ h1 {
     0 0 40px #ff00dc; /* Дальний эффект для глубины */
 }
 
-/* Темно-фиолетовый цвет текста для обычных кнопок*/
+/* Темно-фиолетовый цвет текста для обычных кнопок */
 .btn-default {
-    color: #0F092C !important;
+    color: #0F092C;
 }
 
-/* Оформление контейнера с отзывом */
+/* Оформление контейнера с отзывами */
 .testimonial {
     text-align: center;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
     border-color: #ff00dc;
-    background-color: #0F092C;
+    background-color: rgba(15, 9, 44, 0.6);
     margin: 10px 0;
 }
+
 /* Аватар авторов отзывов */
 .testimonial-avatar {
     width: 80px;
@@ -145,42 +157,47 @@ h1 {
     margin-top: 10px;
 }
 
-
-/*Цвета для услуг*/
+/* Цвета для услуг*/
 .highlight {
-    color: #ff00dc;
-    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 5px #ff00dc, /* Мягкое внутреннее свечение */
+    0 0 10px #ff00dc, /* Средний слой */
+    0 0 20px #ff00dc, /* Более яркое свечение */
+    0 0 40px #ff00dc; /* Дальний эффект для глубины */
 }
 
+/* Контейнер галереи */
 .gallery-container {
     display: flex;
-    justify-content: center; /* Центруем по горизонтали */
-    align-items: center; /* Центруем по вертикали */
-    flex-wrap: wrap;
-    gap: 20px; /* Отступы между блоками */
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    flex-wrap: wrap; /* Перенос элементов при нехватке места */
+    gap: 20px; /* Расстояние между изображениями */
     margin-top: 50px;
     margin-bottom: 20px;
 }
 
-    .gallery-container a {
-        display: block;
-        width: 150px; /* Фиксированная ширина */
-        
-    }
+/* Ссылка внутри галлереи */
+.gallery-container a {
+    display: block;
+    width: 150px; 
+}
 
-    .gallery-container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Картинка всегда заполняет блок */
-        border-radius: 10px;
-        transition: transform 0.3s;
-    }
+/* Оформление изображения */
+.gallery-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Заполнение всего блока */
+    border-radius: 10px; /* Скругление углов */
+    transition: transform 0.3s; /* Плавное изменение масштаба */
+}
 
-    .gallery-container a:hover img {
-        animation: shake-zoom 0.3s infinite; /* Подключаем анимацию тряски */
-    }
+/* Анимация тряски при наведении */
+.gallery-container a:hover img {
+    animation: shake-zoom 0.3s infinite; 
+}
 
-/*Анимация трсяки*/
+/* Анимация трсяки и увеличения */
 @keyframes shake-zoom {
     0% {
         transform: scale(1.1) translate(1px, 1px) rotate(0deg);
@@ -227,35 +244,38 @@ h1 {
     }
 }
 
+/* Заголовок услуг */
 .h2_serv{
     text-align:center;
     font-size: 45px;
 }
 
-/* Контейнер с услугой */
+/* Контейнер услуг */
 .testimonial-wrapper {
-    display: flex; /* включаем flex режим */
-    justify-content: space-between; /* пространство между блоками */
-    gap: 20px; /* можно добавить пробел между ними */
+    display: flex; 
+    justify-content: space-between; /* Пространство между блоками */
+    gap: 20px; /* Отступы между блоками */
 }
 
+/* Блок с услугой */
 .testimonial1 {
     text-align: center;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 10px;
     border-color: #ff00dc;
-    background-color: #0F092C;
+    background-color: rgba(15, 9, 44, 0.6);
     margin: 10px 0;
-    flex: 1; /* чтобы оба занимали равное пространство */
-    max-width: 48%; /* или фиксированную ширину, как хочешь */
-    box-sizing: border-box; /* чтобы паддинги не ломали ширину */
+    flex: 1; /* Равномерное распределение ширины */
+    max-width: 48%; /* Определённая ширина */
+    box-sizing: border-box; /* Учитывать padding в общей ширине */
 }
 
-    .testimonial1:hover {
-        transform: scale(1.02); /* Немного увеличивается при наведении */
-        box-shadow: 0 0 30px rgba(255, 0, 220, 0.7); /* Тень ярче */
-    }
+/* Эффект при наведении на услугу */
+.testimonial1:hover {
+    transform: scale(1.02); /* Увеличение */
+    box-shadow: 0 0 30px rgba(255, 0, 220, 0.7); /* Яркое свечение */
+}
 
 /* Заголовок услуги */
 .testimonial-title1 {
@@ -265,36 +285,101 @@ h1 {
     letter-spacing: 1px;
 }
 
-/* Текст услуги */
+/* Текст отзыва */
 .testimonial-text1 {
-    font-style: normal; /* Без италиков для текста */
+    font-style: normal; 
     font-size: 16px;
-    line-height: 1.6; /* Для удобства чтения */
+    line-height: 1.6; 
     text-align: justify; /* Выровнять по краям */
     margin-bottom: 15px;
 }
 
+/* Отступ контейнера */
 .container {
     margin-bottom: 50px; /* Воздух снизу */
 }
 
-/* Цвет кнопки */
-.btn-primary1 {
-    font-size: 20px;
-    width: 300px;
-    background-color: #ff00dc !important;
-    border-color: #ff00dc !important;
-    color: #fff !important;
-}
-
-    .btn-primary1:hover {
-        background-color: #d600b8 !important; /* Чуть темнее при наведения */
-        border-color: #d600b8 !important;
-        color: #fff !important;
-    }
-
+/* Заголовок услуги */
 .h3_serv {
     text-align: center;
 }
 
+/* Контейнер с блоками концертов */
+.row-about {
+    display: flex;
+    justify-content: center; 
+    gap: 20px; /* Расстояние между блоками */
+    flex-wrap: wrap; /* Позволит перенос, если экран маленький */
+}
 
+/* Стили для каждого блока с информацией о концерте */
+.col-proud {
+    flex: 1; /* Равномерное распределение ширины */
+    max-width: 30%; /* Чтобы не сжималось слишком сильно */
+    text-align: center;
+    margin: 10px;
+}
+
+    /* Отступы картинок */
+    .col-proud img {
+        margin-bottom: 20px;
+        width: 300px;
+    }
+
+/* Оформление контейнера с концертами */
+.concert {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    border-color: #ff00dc;
+    background-color: rgba(15, 9, 44, 0.6);
+    width: 360px;
+    flex-grow: 1;
+}
+
+/* Оформление контейнера с создательницами */
+.creator {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    border-color: #ff00dc;
+    background-color: rgba(15, 9, 44, 0.6);
+    width: 360px;
+    flex-grow: 1;
+}
+
+    /* Оформление аватаров создательниц */
+    .creator img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+/* Контейнер галереи */
+.work-with {
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    align-items: center; /* Центрирование по вертикали */
+    flex-wrap: wrap; /* Перенос элементов при нехватке места */
+    gap: 20px; /* Расстояние между изображениями */
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+    /* Ссылка внутри галлереи */
+    .work-with a {
+        display: block;
+        width: 150px;
+    }
+
+    /* Оформление изображения */
+    .work-with img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Заполнение всего блока */
+        border-radius: 10px; /* Скругление углов */
+        transition: transform 0.3s; /* Плавное изменение масштаба */
+    }

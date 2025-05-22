@@ -19,6 +19,7 @@
     <Name>deepvoid</Name>
     <RootNamespace>deepvoid</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <SuppressPackageInstallationPrompt>True</SuppressPackageInstallationPrompt>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -55,6 +56,9 @@
     <Content Include="static\images\pn4.png" />
     <Content Include="static\images\pn5.png" />
     <Content Include="static\images\pn6.png" />
+    <Content Include="static\images\review_1.jpg" />
+    <Content Include="static\images\review_2.png" />
+    <Content Include="static\images\review_3.png" />
     <Content Include="static\images\user_avatar.png" />
     <Content Include="static\images\иконка.png" />
     <Content Include="static\images\обложка.png" />
@@ -82,8 +86,8 @@
   <ItemGroup>
     <Interpreter Include="env\">
       <Id>env</Id>
-      <Version>3.11</Version>
-      <Description>env (Python 3.11 (64-bit))</Description>
+      <Version>3.13</Version>
+      <Description>env (Python 3.13 (64-bit))</Description>
       <InterpreterPath>Scripts\python.exe</InterpreterPath>
       <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
