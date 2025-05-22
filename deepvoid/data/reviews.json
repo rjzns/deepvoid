@@ -1,0 +1,37 @@
+[
+	{
+		"author": "Kontext",
+		"text": "qwertyuiasdfghwerty",
+		"timestamp": "2025-05-22T20:27:56.716018"
+	},
+	{
+		"author": "Alice",
+		"text": "Amazing service, highly recommend!",
+		"contact": "+12345678901",
+		"timestamp": "2025-05-20T12:34:56"
+	},
+	{
+		"author": "Bob_92",
+		"text": "Good quality sound equipment. Will rent again.",
+		"contact": "21.05.2025",
+		"timestamp": "2025-05-21T10:15:30"
+	},
+	{
+		"author": "DJMike",
+		"text": "Everything worked perfectly at the club event.",
+		"contact": "+447700900123",
+		"timestamp": "2025-05-22T09:00:00"
+	},
+	{
+		"author": "Nina",
+		"text": "Very professional team. Thank you!",
+		"contact": "22.05.2025",
+		"timestamp": "2025-05-22T14:20:10"
+	},
+	{
+		"author": "SoundLover",
+		"text": "Great experience overall. Easy to book and fast delivery.",
+		"contact": "+380501112233",
+		"timestamp": "2025-05-22T15:45:00"
+	}
+]
