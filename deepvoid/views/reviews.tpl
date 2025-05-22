@@ -5,13 +5,23 @@
 
     <form action="/reviews" method="post" class="review-form testimonial">
         <div class="form-group" style="margin-bottom: 1rem;">
-            <label for="author" class="form-label">Username</label>
-            <input id="author" type="text" name="author" value="{{data['author']}}"
-                   class="form-control {{'input-validation-error' if errors.get('author') else ''}}">
-            % if errors.get('author'):
-                <span class="field-validation-error">{{errors['author']}}</span>
-            % end
-        </div>
+    <label for="author" class="form-label">Username</label>
+    <input id="author" type="text" name="author" value="{{data['author']}}"
+           class="form-control {{'input-validation-error' if errors.get('author') else ''}}">
+    % if errors.get('author'):
+        <span class="field-validation-error">{{errors['author']}}</span>
+    % end
+</div>
+
+    <!-- NEW: Phone input -->
+    <div class="form-group" style="margin-bottom: 1rem;">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input id="phone" type="text" name="phone" value="{{data.get('phone', '')}}"
+               class="form-control {{'input-validation-error' if errors.get('phone') else ''}}">
+        % if errors.get('phone'):
+            <span class="field-validation-error">{{errors['phone']}}</span>
+        % end
+    </div>
 
         <div class="form-group" style="margin-bottom: 1rem;">
             <label for="text" class="form-label">Review</label>

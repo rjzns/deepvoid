@@ -12,20 +12,23 @@ def load_reviews():
 
 def save_review(review):
     reviews = load_reviews()
-    # Add timestamp automatically
     review['timestamp'] = datetime.now().isoformat()
-    reviews.insert(0, review)  # Add new review to the top
+    reviews.insert(0, review)
     with open(DATA_FILE, 'w', encoding='utf-8') as f:
         json.dump(reviews, f, ensure_ascii=False, indent=4)
+
 
 def validate_review(data):
     errors = {}
     author = data.get("author", "").strip()
     text = data.get("text", "").strip()
+    phone = data.get("phone", "").strip()
 
     if not author:
         errors["author"] = "Please enter your name or nickname."
     if not text:
         errors["text"] = "Please enter your review text."
+    if phone and not phone.isdigit():
+        errors["phone"] = "Phone must contain only digits."
 
     return errors
