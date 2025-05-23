@@ -48,12 +48,14 @@ def reviews():
     errors = {}
     data = {
         "author": "",
-        "text": ""
+        "text": "",
+        "phone": ""
     }
 
     if request.method == 'POST':
         data["author"] = request.forms.get('author', '').strip()
         data["text"] = request.forms.get('text', '').strip()
+        data["phone"] = request.forms.get('phone', '').strip()
 
         errors = review_service.validate_review(data)
 
@@ -61,7 +63,7 @@ def reviews():
             review = {
                 "author": data["author"],
                 "text": data["text"],
-                "timestamp": datetime.now().isoformat()
+                "phone": data["phone"]
             }
             review_service.save_review(review)
             redirect('/reviews')
