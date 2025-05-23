@@ -18,6 +18,8 @@ def save_review(review):
         json.dump(reviews, f, ensure_ascii=False, indent=4)
 
 
+import re
+
 def validate_review(data):
     errors = {}
     author = data.get("author", "").strip()
@@ -28,7 +30,9 @@ def validate_review(data):
         errors["author"] = "Please enter your name or nickname."
     if not text:
         errors["text"] = "Please enter your review text."
-    if phone and not phone.isdigit():
-        errors["phone"] = "Phone must contain only digits."
+
+    phone_pattern = r"^\+7\(\d{3}\)\d{3}-\d{2}-\d{2}$"
+    if phone and not re.match(phone_pattern, phone):
+        errors["phone"] = "Phone number must be in format +7(XXX)XXX-XX-XX"
 
     return errors

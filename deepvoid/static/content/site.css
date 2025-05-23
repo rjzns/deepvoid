@@ -433,6 +433,12 @@ h1 {
         box-sizing: border-box;
     }
 
+    .review-form input#phone.form-control {
+        max-width: 300px !important; /* Фиксированная ширина для поля имени */
+        width: 300px !important;
+        box-sizing: border-box;
+    }
+
     .review-form textarea {
         max-width: none; /* Полная ширина для textarea */
         width: 100%;
