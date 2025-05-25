@@ -14,40 +14,25 @@
     <table>
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Author</th>
-                <th>Description</th>
-                <th>Date</th>
+                <th>Название</th>
+                <th>Автор</th>
+                <th>Описание</th>
+                <th>Дата</th>
             </tr>
         </thead>
         <tbody id="articles-body">
+            % if error:
+                <tr><td colspan="4">Ошибка загрузки статей: {{error}}</td></tr>
+            % else:
+                % for article in articles:
+                    <tr>
+                        <td><a href="{{article['link']}}" target="_blank" class="article-link">{{article['title']}}</a></td>
+                        <td>{{article['author']}}</td>
+                        <td>{{article['description']}}</td>
+                        <td>{{article['date']}}</td>
+                    </tr>
+                % end
+            % end
         </tbody>
     </table>
 </div>
-
-<script>
-async function loadArticles() {
-    try {
-        const response = await fetch('/static/texts/articles.json');
-        const articles = await response.json();
-        const tbody = document.getElementById('articles-body');
-        
-        tbody.innerHTML = ''; 
-        
-        articles.forEach(article => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td><a href="${article.link}" target="_blank" class="article-link">${article.title}</a></td>
-                <td>${article.author}</td>
-                <td>${article.description}</td>
-                <td>${article.date}</td>
-            `;
-            tbody.appendChild(row);
-        });
-    } catch (error) {
-        console.error('Error JSON load:', error);
-    }
-}
-
-document.addEventListener('DOMContentLoaded', loadArticles);
-</script>

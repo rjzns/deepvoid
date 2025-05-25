@@ -5,6 +5,7 @@ This script runs the application using a development server.
 import bottle
 import os
 import sys
+from articles_load import load_articles
 
 # routes contains the HTTP handlers for our server and must be imported.
 import routes
@@ -18,6 +19,14 @@ def wsgi_app():
     """Returns the application to make available through wfastcgi. This is used
     when the site is published to Microsoft Azure."""
     return bottle.default_app()
+
+# Страница со статьями
+@bottle.route('/articles')
+def articles():
+    data = load_articles()
+    articles = data.get('articles', []) if 'articles' in data else []
+    error = data.get('error', None)
+    return bottle.template('articles', title='Useful articles', year=2025, articles=articles, error=error)
 
 if __name__ == '__main__':
     PROJECT_ROOT = os.path.abspath(os.path.dirname(__file__))
