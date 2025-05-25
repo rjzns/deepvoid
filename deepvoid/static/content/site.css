@@ -14,7 +14,9 @@ body {
 input,
 select,
 textarea {
-    max-width: 280px;
+    max-width: none !important; /* Убираем ограничение max-width */
+    width: 100%; /* Растягиваем на всю ширину контейнера */
+    box-sizing: border-box;
 }
 
 /* Цвет фона */
@@ -55,7 +57,7 @@ input[type="checkbox"].input-validation-error {
 
 /* Высота */
 .navbar {
-    max-height: 50px; 
+    max-height: 50px;
     padding-top: 5px;
     padding-bottom: 5px;
 }
@@ -66,33 +68,33 @@ input[type="checkbox"].input-validation-error {
     border-color: #0F092C;
 }
 
-/* Цвет текста логотипа */
-.navbar-inverse .navbar-brand {
-color: white;
-}
-
-    /* Цвет текста логотипа при наведении */
-    .navbar-inverse .navbar-brand:hover {
+    /* Цвет текста логотипа */
+    .navbar-inverse .navbar-brand {
         color: white;
-        text-shadow: 0 0 5px #ff00dc, /* Мягкое внутреннее свечение */
-        0 0 10px #ff00dc, /* Средний слой */
-        0 0 20px #ff00dc, /* Более яркое свечение */
-        0 0 40px #ff00dc; /* Дальний эффект для глубины */
     }
 
-/* Цвет текста в navbar  */
-.navbar-inverse .navbar-nav > li > a {
-color: white;
-}
+        /* Цвет текста логотипа при наведении */
+        .navbar-inverse .navbar-brand:hover {
+            color: white;
+            text-shadow: 0 0 5px #ff00dc, /* Мягкое внутреннее свечение */
+            0 0 10px #ff00dc, /* Средний слой */
+            0 0 20px #ff00dc, /* Более яркое свечение */
+            0 0 40px #ff00dc; /* Дальний эффект для глубины */
+        }
 
-    /* Цвет текста в navbar при наведении */
-    .navbar-inverse .navbar-nav > li > a:hover {
+    /* Цвет текста в navbar  */
+    .navbar-inverse .navbar-nav > li > a {
         color: white;
-        text-shadow: 0 0 5px #ff00dc, /* Мягкое внутреннее свечение */
-        0 0 10px #ff00dc, /* Средний слой */
-        0 0 20px #ff00dc, /* Более яркое свечение */
-        0 0 40px #ff00dc; /* Дальний эффект для глубины */
     }
+
+        /* Цвет текста в navbar при наведении */
+        .navbar-inverse .navbar-nav > li > a:hover {
+            color: white;
+            text-shadow: 0 0 5px #ff00dc, /* Мягкое внутреннее свечение */
+            0 0 10px #ff00dc, /* Средний слой */
+            0 0 20px #ff00dc, /* Более яркое свечение */
+            0 0 40px #ff00dc; /* Дальний эффект для глубины */
+        }
 
 /* Цвет фона для контейнера на главной странице */
 .jumbotron {
@@ -177,25 +179,25 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* Ссылка внутри галлереи */
-.gallery-container a {
-    display: block;
-    width: 150px; 
-}
+    /* Ссылка внутри галлереи */
+    .gallery-container a {
+        display: block;
+        width: 150px;
+    }
 
-/* Оформление изображения */
-.gallery-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Заполнение всего блока */
-    border-radius: 10px; /* Скругление углов */
-    transition: transform 0.3s; /* Плавное изменение масштаба */
-}
+    /* Оформление изображения */
+    .gallery-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Заполнение всего блока */
+        border-radius: 10px; /* Скругление углов */
+        transition: transform 0.3s; /* Плавное изменение масштаба */
+    }
 
-/* Анимация тряски при наведении */
-.gallery-container a:hover img {
-    animation: shake-zoom 0.3s infinite; 
-}
+    /* Анимация тряски при наведении */
+    .gallery-container a:hover img {
+        animation: shake-zoom 0.3s infinite;
+    }
 
 /* Анимация трсяки и увеличения */
 @keyframes shake-zoom {
@@ -245,14 +247,14 @@ h1 {
 }
 
 /* Заголовок услуг */
-.h2_serv{
-    text-align:center;
+.h2_serv {
+    text-align: center;
     font-size: 45px;
 }
 
 /* Контейнер услуг */
 .testimonial-wrapper {
-    display: flex; 
+    display: flex;
     justify-content: space-between; /* Пространство между блоками */
     gap: 20px; /* Отступы между блоками */
 }
@@ -271,11 +273,11 @@ h1 {
     box-sizing: border-box; /* Учитывать padding в общей ширине */
 }
 
-/* Эффект при наведении на услугу */
-.testimonial1:hover {
-    transform: scale(1.02); /* Увеличение */
-    box-shadow: 0 0 30px rgba(255, 0, 220, 0.7); /* Яркое свечение */
-}
+    /* Эффект при наведении на услугу */
+    .testimonial1:hover {
+        transform: scale(1.02); /* Увеличение */
+        box-shadow: 0 0 30px rgba(255, 0, 220, 0.7); /* Яркое свечение */
+    }
 
 /* Заголовок услуги */
 .testimonial-title1 {
@@ -287,9 +289,9 @@ h1 {
 
 /* Текст отзыва */
 .testimonial-text1 {
-    font-style: normal; 
+    font-style: normal;
     font-size: 16px;
-    line-height: 1.6; 
+    line-height: 1.6;
     text-align: justify; /* Выровнять по краям */
     margin-bottom: 15px;
 }
@@ -307,7 +309,7 @@ h1 {
 /* Контейнер с блоками концертов */
 .row-about {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
     gap: 20px; /* Расстояние между блоками */
     flex-wrap: wrap; /* Позволит перенос, если экран маленький */
 }
@@ -383,3 +385,160 @@ h1 {
         border-radius: 10px; /* Скругление углов */
         transition: transform 0.3s; /* Плавное изменение масштаба */
     }
+
+
+/* Основной контейнер */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+    .body-content.container {
+        max-width: 1200px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+/* Форма отзывов */
+.review-form {
+    background-color: rgba(15, 9, 44, 0.85);
+    padding: 25px 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px #ff00dc88;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto 50px auto;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+    .review-form .form-group {
+        width: 100%;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column; /* Вертикальное расположение label и input */
+        align-items: flex-start; /* Выравнивание по левому краю */
+    }
+
+    .review-form label {
+        margin-bottom: 8px; /* Отступ снизу для размещения над полем */
+        font-weight: 600;
+        font-size: 18px; /* Увеличенный размер шрифта */
+        color: #ff00dc;
+    }
+
+    .review-form input#author.form-control {
+        max-width: 300px !important; /* Фиксированная ширина для поля имени */
+        width: 300px !important;
+        box-sizing: border-box;
+    }
+
+    .review-form input#phone.form-control {
+        max-width: 300px !important; /* Фиксированная ширина для поля имени */
+        width: 300px !important;
+        box-sizing: border-box;
+    }
+
+    .review-form textarea {
+        max-width: none; /* Полная ширина для textarea */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .review-form input,
+    .review-form textarea {
+        padding: 10px 12px;
+        font-size: 14px;
+        border-radius: 8px;
+        border: 2px solid #444;
+        background-color: #1a1336;
+        color: white;
+        transition: border-color 0.3s ease;
+    }
+
+        .review-form input:focus,
+        .review-form textarea:focus {
+            border-color: #ff00dc;
+            outline: none;
+        }
+
+/* Убираем глобальное ограничение max-width */
+input,
+select,
+textarea {
+    max-width: none;
+}
+
+/* Сообщения об ошибках */
+.field-validation-error {
+    color: #ff4d6d;
+    font-size: 13px;
+    margin-top: 4px;
+    display: block;
+}
+
+/* Кнопка отправки */
+.btn-primary {
+    background-color: #ff00dc;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 10px #ff00dcbb;
+    display: inline-block;
+}
+
+    .btn-primary:hover {
+        background-color: #ff33cc;
+        box-shadow: 0 0 25px #ff00dcdd;
+    }
+
+/* Список отзывов */
+.reviews-list {
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.review-card {
+    background-color: rgba(15, 9, 44, 0.75);
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 15px #ff00dcaa;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: transform 0.25s ease;
+}
+
+    .review-card:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 30px #ff00dcdd;
+    }
+
+.review-header {
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #ff00dc;
+}
+
+.review-text {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.review-footer small {
+    color: #aaa;
+    font-size: 13px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: track: 1em;
+}
