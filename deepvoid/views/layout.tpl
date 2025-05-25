@@ -26,6 +26,7 @@
                     <li><a href="/service">Services</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/reviews">Reviews</a></li>
+                    <li><a href="/orders">Orders</a></li>
                 </ul>
             </div>
         </div>
