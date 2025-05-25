@@ -39,4 +39,4 @@ if __name__ == '__main__':
     def server_static(filepath):
         return bottle.static_file(filepath, root=STATIC_ROOT)
       
-    bottle.run(server='wsgiref', host=HOST, port=PORT
+    bottle.run(server='wsgiref', host=HOST, port=PORT)
