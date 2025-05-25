@@ -35,10 +35,15 @@ def about():
         message="Предоставление аренды звукового и светового оборудования для ночных клубов",
         year=datetime.now().year
     )
-
-from bottle import route, request, redirect, template, static_file
-from datetime import datetime
-import review_service
+  
+@route('/articles')
+@view('articles')
+def articles():
+    """Renders the articles page."""
+    return dict(
+        title="Полезные статьи",
+        year=datetime.now().year
+    )
 
 @app.route('/static/<filename>')
 def send_static(filename):
