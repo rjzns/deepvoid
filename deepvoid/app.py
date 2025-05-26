@@ -5,7 +5,9 @@ This script runs the application using a development server.
 import bottle
 import os
 import sys
+
 import routes
+import articles_routes
 
 if '--debug' in sys.argv[1:] or 'SERVER_DEBUG' in os.environ:
     bottle.debug(True)
@@ -28,5 +30,5 @@ if __name__ == '__main__':
     @bottle.route('/static/<filepath:path>')
     def server_static(filepath):
         return bottle.static_file(filepath, root=STATIC_ROOT)
-
+      
     bottle.run(server='wsgiref', host=HOST, port=PORT)

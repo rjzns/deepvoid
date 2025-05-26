@@ -34,6 +34,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="articles_add.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="articles_load.py" />
+    <Compile Include="articles_routes.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="order_service.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="review_service.py">
       <SubType>Code</SubType>
     </Compile>
@@ -48,10 +58,12 @@
     <Folder Include="static\content\" />
     <Folder Include="static\fonts\" />
     <Folder Include="static\images\" />
+    <Folder Include="static\texts\" />
     <Folder Include="static\scripts\" />
     <Folder Include="views\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="data\orders.json" />
     <Content Include="data\reviews.json">
       <SubType>Code</SubType>
     </Content>
@@ -88,10 +100,16 @@
     <Content Include="static\scripts\jquery.validate.unobtrusive.js" />
     <Content Include="static\scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="static\scripts\modernizr-2.6.2.js" />
+    <Content Include="static\scripts\orders.js" />
     <Content Include="static\scripts\respond.js" />
     <Content Include="static\scripts\respond.min.js" />
     <Content Include="static\scripts\_references.js" />
+    <Content Include="static\texts\articles.json">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="views\about.tpl" />
+    <Content Include="views\articles.tpl" />
+    <Content Include="views\orders.tpl" />
     <Content Include="views\reviews.tpl">
       <SubType>Code</SubType>
     </Content>
