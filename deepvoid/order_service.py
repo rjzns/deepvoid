@@ -47,7 +47,7 @@ def validate_order(data):
     name = data.get("name", "").strip()
     services = data.get("services", [])
     description = data.get("description", "").strip()
-    date = data.get("date", "").strip()
+    date = data.get("date", "")
     phone = data.get("phone", "").strip()
 
     if not name:
@@ -59,17 +59,21 @@ def validate_order(data):
     if not date:
         errors["date"] = "Please enter a date."
     else:
-        date_pattern = r"^\d{2}\.\d{2}\.\d{4}$"
-        if not re.match(date_pattern, date):
-            errors["date"] = "Date must be in format DD.MM.YYYY."
+        # Check for whitespace
+        if date != date.strip():
+            errors["date"] = "Date must not contain leading or trailing whitespace."
         else:
-            try:
-                order_date = datetime.strptime(date, "%d.%m.%Y")
-                current_date = datetime.now()
-                if order_date.date() < current_date.date():
-                    errors["date"] = "Date cannot be in the past."
-            except ValueError:
-                errors["date"] = "Invalid date format."
+            date_pattern = r"^\d{2}\.\d{2}\.\d{4}$"
+            if not re.match(date_pattern, date):
+                errors["date"] = "Date must be in format DD.MM.YYYY."
+            else:
+                try:
+                    order_date = datetime.strptime(date, "%d.%m.%Y")
+                    current_date = datetime.now()
+                    if order_date.date() <= current_date.date():
+                        errors["date"] = "Date must be in the future."
+                except ValueError:
+                    errors["date"] = "Invalid date format."
     if phone and not re.match(r"^\+7\(\d{3}\)\d{3}-\d{2}-\d{2}$", phone):
         errors["phone"] = "Phone must be in format +7(XXX)XXX-XX-XX."
 
