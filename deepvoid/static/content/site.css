@@ -25,11 +25,6 @@ body {
     color: white;
 }
 
-/* Стили для сообщений об ошибках валидации */
-.field-validation-error {
-    color: #ff00dc; /* Красный цвет ошибки */
-}
-
 /* Скрываем сообщения, если ошибок нет */
 .field-validation-valid {
     display: none;

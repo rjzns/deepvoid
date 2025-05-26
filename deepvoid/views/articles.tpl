@@ -39,23 +39,32 @@
 
 <div class="article-form">
     <h2>Add a new article</h2>
-    % if message:
-        <p style="color: white; text-align: center; font-size: 18px">{{message}}</p>
+    % if 'general' in form_errors:
+        <div class="field-validation-error">{{form_errors['general']}}</div>
     % end
     <form method="POST" action="/articles">
         <div class="form-row">
             <div class="form-group">
                 <label for="title">Title</label>
                 <input type="text" id="title" name="title" class="form-control" required>
+                % if 'title' in form_errors:
+                    <span class="field-validation-error" style="color: #ff00dc">{{form_errors['title']}}</span>
+                % end
             </div>
             <div class="form-group">
                 <label for="author">Author</label>
                 <input type="text" id="author" name="author" class="form-control" required>
+                % if 'author' in form_errors:
+                    <span class="field-validation-error" style="color: #ff00dc">{{form_errors['author']}}</span>
+                % end
             </div>
         </div>
         <div class="form-group">
             <label for="description">Description</label>
             <textarea id="description" name="description" class="form-control" rows="3" required></textarea>
+            % if 'description' in form_errors:
+                <span class="field-validation-error" style="color: #ff00dc">{{form_errors['description']}}</span>
+            % end
         </div>
         <div class="form-group">
             <label for="link">Link</label>
