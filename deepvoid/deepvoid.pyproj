@@ -22,7 +22,7 @@
     <SuppressPackageInstallationPrompt>True</SuppressPackageInstallationPrompt>
     <TestFramework>unittest</TestFramework>
     <UnitTestPattern>test*.py</UnitTestPattern>
-    <UnitTestRootDirectory>.</UnitTestRootDirectory>
+    <UnitTestRootDirectory>.\tests</UnitTestRootDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -48,13 +48,20 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="routes.py" />
-    <Compile Include="test_orders.py" />
-    <Compile Include="test_review.py">
+    <Compile Include="tests\test_articles.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tests\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="tests\test_orders.py" />
+    <Compile Include="tests\test_review.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="data\" />
+    <Folder Include="tests\" />
     <Folder Include="static\" />
     <Folder Include="static\content\" />
     <Folder Include="static\fonts\" />

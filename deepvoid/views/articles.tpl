@@ -1,5 +1,6 @@
 % rebase('layout.tpl', title=title, year=year)
 
+<!-- Секция с заголовком и описанием компании -->
 <div class="jumbotron">
 	<h1>Useful articles</h1>
 	<p class="lead">
@@ -10,6 +11,7 @@
     </p>
 </div>
 
+<!-- Контейнер для таблицы со списком статей -->
 <div class="table-container">
     <table>
         <thead>
@@ -21,12 +23,13 @@
             </tr>
         </thead>
         <tbody id="articles-body">
+            <!-- Если ошибка есть, показываем её -->
             % if error:
                 <tr><td colspan="4">Error uploading articles: {{error}}</td></tr>
             % else:
                 % for article in articles:
                     <tr>
-                        <td><a href="{{article['link']}}" target="_blank" class="article-link">{{article['title']}}</a></td>
+                        <td><a href="{{article['link']}}" target="_blank" class="article-link">{{article['title']}}</a></td> <!-- Название статьи как ссылка -->
                         <td>{{article['author']}}</td>
                         <td>{{article['description']}}</td>
                         <td>{{article['date']}}</td>
@@ -37,14 +40,16 @@
     </table>
 </div>
 
+<!-- Форма для добавления новой статьи -->
 <div class="article-form">
     <h2>Add a new article</h2>
     % if 'general' in form_errors:
         <div class="field-validation-error">{{form_errors['general']}}</div>
     % end
-    <form method="POST" action="/articles">
+    <form method="POST" action="/articles"> <!-- Форма отправляет данные методом POST на /articles -->
         <div class="form-row">
             <div class="form-group">
+                <!-- Название -->
                 <label for="title">Title</label>
                 <input type="text" id="title" name="title" class="form-control" required>
                 % if 'title' in form_errors:
@@ -52,6 +57,7 @@
                 % end
             </div>
             <div class="form-group">
+                <!-- Автор -->
                 <label for="author">Author</label>
                 <input type="text" id="author" name="author" class="form-control" required>
                 % if 'author' in form_errors:
@@ -60,6 +66,7 @@
             </div>
         </div>
         <div class="form-group">
+            <!-- Описание -->
             <label for="description">Description</label>
             <textarea id="description" name="description" class="form-control" rows="3" required></textarea>
             % if 'description' in form_errors:
@@ -67,6 +74,7 @@
             % end
         </div>
         <div class="form-group">
+            <!-- Ссылка -->
             <label for="link">Link</label>
             <input type="url" id="link" name="link" class="form-control" required>
         </div>

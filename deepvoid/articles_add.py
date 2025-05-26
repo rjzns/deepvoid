@@ -19,7 +19,7 @@ def normalize_date(date_str):
 def check_title(title):
     # Проверка длины (не больше 255)
     if len(title) > 255:
-        return "The title must not exceed 255 characters."
+        return "The title must not exceed 255 characters"
     
     # Проверка на допустимые символы (англ буквы, цифры, - . , ; : ! ? " & № % ())
     if not re.match(r'^[a-zA-Z][a-zA-Z0-9\-\.\,\;\:\!\?\"\&\№\%\(\) ]*$', title):
@@ -28,18 +28,13 @@ def check_title(title):
         return "The title can contain only English letters, numbers, and symbols: - . , ; : ! ? \" & № % ( )"
     
     # Проверка на повторение специальных символов
-    special_chars = r'[\-\.\,\;\:\!\?\"\&\№\%\(\)]' # Все специальные символы из допустимого набора
-    # Проверка на повторение подряд
-    if re.search(r'([\-,;:!?\"&№%()])\1', title):
-        return "The title may not contain several special characters in a row"
-    # Проверяем повторение через пробел, исключая случаи вроде ", -"
-    if re.search(r'([\-,\.;:!?\"&№%()])\s*\1', title) and not re.search(r'[,\.;:!?]\s{1}\-|[\.\?!]\s*$|\"\.?|\"!|\"?', title):
+    if re.search(r'([\-.,;:!?\"&№%()])(\s*\1)+', title):
         return "The title may not contain several special characters in a row"
     
     # Подсчёт буквенных символов
     letter_count = len(re.findall(r'[a-zA-Z]', title))
     if letter_count < 4:
-        return "The title must contain at least 4 letters."
+        return "The title must contain at least 4 letters"
     
     return True
 
@@ -50,8 +45,8 @@ def check_author(author):
     
     # Проверка на допустимые символы (англ буквы, -)
     if not re.match(r'^[a-zA-Z][a-zA-Z\-]*$', author):
-        if author.startswith('-'):
-            return "The author's name cannot begin with -"
+        if author.startswith('-') or author.endswith('-'):
+            return "The author's name cannot begin or end with -"
         return "The author's name can contain only English letters and a symbol -"
     
     # Проверка на несколько - рядом (включая через пробел)
@@ -77,12 +72,7 @@ def check_description(description):
         return "The description can contain only English letters, numbers, and symbols: - . , ; : ! ? \" & № % ( )"
     
     # Проверка на повторение специальных символов
-    special_chars = r'[\-\.\,\;\:\!\?\"\&\№\%\(\)]' # Все специальные символы из допустимого набора
-    # Проверяем повторение подряд
-    if re.search(r'([\-,;:!?\"&№%()])\1', description):
-        return "The description cannot contain several special characters in a row."
-    # Проверяем повторение через пробел, исключая случаи вроде ", -"
-    if re.search(r'([\-,\.;:!?\"&№%()])\s*\1', description) and not re.search(r'[,\.;:!?]\s{1}\-|[\.\?!]\s*$|\"\.?|\"!|\"?', description):
+    if re.search(r'([\-.,;:!?\"&№%()])(\s*\1)+', description):
         return "The description cannot contain several special characters in a row."
         
     # Подсчёт буквенных символов
