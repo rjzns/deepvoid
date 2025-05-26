@@ -120,11 +120,20 @@ h1 {
     0 0 40px #ff00dc; /* Дальний эффект для глубины */
 }
 
-/* Темно-фиолетовый цвет текста для обычных кнопок */
 .btn-default {
-    color: #0F092C;
+    background-color: #fff !important;
+    border-color: #fff !important;
+    color: #ff00dc !important;
+    border-radius: 20px !important; /* Добавляем скругление углов */
 }
 
+    /* При наведении */
+    .btn-default:hover {
+        background-color: #fff !important;
+        border-color: #fff !important;
+        color: #ff3ce6 !important;
+        border-radius: 20px !important; /* Сохраняем скругление при наведении */
+    }
 /* Оформление контейнера с отзывами */
 .testimonial {
     text-align: center;
