@@ -27,7 +27,7 @@ body {
 
 /* Стили для сообщений об ошибках валидации */
 .field-validation-error {
-    color: #b94a48; /* Красный цвет ошибки */
+    color: #ff00dc; /* Красный цвет ошибки */
 }
 
 /* Скрываем сообщения, если ошибок нет */
@@ -37,7 +37,7 @@ body {
 
 /* Красная рамка для полей ввода с ошибкой */
 input.input-validation-error {
-    border: 1px solid #b94a48;
+    border: 1px solid #ff00dc;
 }
 
 /* Убираем рамку у чекбоксов с ошибкой */
@@ -118,6 +118,7 @@ input[type="checkbox"].input-validation-error {
 /* Оконтовка текста заголовка */
 h1 {
     color: white;
+    margin-bottom: 12px;
     text-shadow: 0 0 5px #ff00dc, /* Мягкое внутреннее свечение */
     0 0 10px #ff00dc, /* Средний слой */
     0 0 20px #ff00dc, /* Более яркое свечение */
@@ -386,6 +387,109 @@ h1 {
         transition: transform 0.3s; /* Плавное изменение масштаба */
     }
 
+/* Оформление таблицы */
+.table-container {
+    max-height: 400px; /* Фиксированная высота таблицы */
+    overflow-y: auto; /* Вертикальная прокрутка */
+    margin: 20px 0;
+    font-size: 18px;
+    border-radius: 10px; /* Скругленные углы */
+}
+
+    /* Таблица */
+    .table-container table {
+        width: 100%;
+        border-collapse: collapse;
+        background: rgba(15, 9, 44, 0.8); /* Фон с прозрачностью */
+        color: white;
+        font-family: 'Segoe UI';
+    }
+
+    /* Фиксация шапки таблицы */
+    .table-container thead {
+        position: sticky;
+        top: 0; /* Прикрепление к верхнему краю контейнера */
+        background-color: rgba(15, 9, 44); /* Фон, чтобы шапка не была прозрачной при прокрутке */
+        z-index: 1; /* Шапка поверх строк */
+    }
+
+    /* Стили для заголовков таблицы */
+    .table-container th {
+        padding: 12px 15px;
+        font-size: 18px;
+        font-weight: 600;
+        text-align: left;
+        border-bottom: 2px solid #ff00dc;
+        text-shadow: 0 0 5px #ff00dc;
+        border: none; /* Прозрачные границы */
+        color: white; /* Белый текст для читаемости */
+    }
+
+    /* Стили для строк таблицы */
+    .table-container td {
+        padding: 12px 15px;
+        font-size: 18px;
+        text-align: left;
+        border-bottom: 1px solid #444;
+        border: none; /* Прозрачные границы */
+        color: white; /* Белый текст для читаемости */
+    }
+
+    /* Ссылки в таблице */
+    .table-container .article-link {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+        .table-container .article-link:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+/* Стили для скроллбара */
+.table-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: rgba(15, 9, 44, 0.3);
+    border-radius: 10px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+/* Выделение ссылки */
+.article-link {
+    color: #fff; /* Белый цвет для ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+    .article-link:hover {
+        color: #fff; /* Белый цвет при наведении */
+        text-shadow: 0 0 5px #ff00dc, /* Мягкое внутреннее свечение */
+        0 0 10px #ff00dc, /* Средний слой */
+        0 0 20px #ff00dc, /* Более яркое свечение */
+        0 0 40px #ff00dc; /* Дальний эффект для глубины */
+        text-decoration: none !important; /* Явно убираем подчеркивание при наведении */
+    }
+
+    /* Эффект для посещённых ссылок */
+    .article-link:visited {
+        color: #fff !important;
+        text-shadow: 0 0 3px rgba(255, 0, 220, 0.4); /* Лёгкое свечение при нажатии */
+        text-decoration: none !important;
+    }
+
+    /* Стиль для состояния при нажатии */
+    .article-link:active {
+        color: #fff !important;
+        text-shadow: 0 0 3px rgba(255, 0, 220, 0.4); /* Лёгкое свечение при нажатии */
+        text-decoration: none !important; /* Убираем подчеркивание */
+    }
 
 /* Основной контейнер */
 .body-content {
@@ -544,7 +648,7 @@ h2 {
 }
 
 
-/* New styles for orders page */
+/* Стили для страницы заказов */
 .services-checkboxes {
     display: flex;
     flex-direction: column;
@@ -555,7 +659,7 @@ h2 {
 .service-checkbox {
     display: flex;
     align-items: center;
-    font-size: 16px; /* Larger font for readability */
+    font-size: 16px;
     color: white;
 }
 
@@ -584,3 +688,87 @@ h2 {
             border-color: #ff00dc;
             outline: none;
         }
+
+/* Общий стиль формы для добавления статьи */
+.article-form {
+    background-color: rgba(15, 9, 44, 0.85);
+    padding: 25px 30px;
+    border-radius: 12px;
+    width: 100%; 
+    margin: 50px 0;
+    color: white;
+    font-family: 'Segoe UI';
+}
+
+    /* Стиль заголовка формы */
+    .article-form h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 28px;
+        color: white;
+        text-shadow: 0 0 5px #ff00dc, 0 0 10px #ff00dc;
+    }
+
+    /* Контейнер-ряд для полей ввода "Название" и "Автор" */
+    .form-row {
+        display: flex;
+        flex-direction: row; /* Горизонтальное расположение */
+        flex-wrap: nowrap; /* Удаление переноса на новую строку */
+        gap: 20px; /* Расстояние между полями */
+        margin-bottom: 20px;
+    }
+
+    /* Группа элементов формы */
+    .article-form .form-group {
+        flex: 1; /* Поля делят пространство поровну */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Стиль для меток */
+    .article-form label {
+        margin-bottom: 8px;
+        font-weight: 600;
+        font-size: 18px;
+        color: white;
+    }
+
+    /* Стиль для полей ввода и текстовых областей */
+    .article-form input,
+    .article-form textarea {
+        padding: 10px 12px;
+        font-size: 14px;
+        border-radius: 8px;
+        border: 2px solid #444;
+        background-color: #1a1336;
+        color: white;
+        transition: border-color 0.3s ease;
+        width: 100%;
+        box-sizing: border-box; /* Размер элемента включает внутренние отступы и границы */
+    }
+
+        /* Изменение цвета границы полей ввода и текстовой области при фокусе */
+        .article-form input:focus,
+        .article-form textarea:focus {
+            border-color: #ff00dc;
+            outline: none;
+        }
+
+        /* Ограничение ширины полей "Название" и "Автор" */
+        .article-form input#title,
+        .article-form input#author {
+            max-width: 400px;
+        }
+
+        /* Ограничение ширины поля "Ссылка" */
+        .article-form input#link {
+            max-width: 600px;
+        }
+
+    /* Текстовая область для описания */
+    .article-form textarea {
+        max-width: none;
+        width: 100%;
+        resize: vertical;
+    }
