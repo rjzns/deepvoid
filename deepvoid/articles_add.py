@@ -21,6 +21,11 @@ def check_title(title):
     if len(title) > 255:
         return "The title must not exceed 255 characters"
     
+    # Подсчёт буквенных символов
+    letter_count = len(re.findall(r'[a-zA-Z]', title))
+    if letter_count < 4:
+        return "The title must contain at least 4 letters"
+    
     # Проверка на допустимые символы (англ буквы, цифры, - . , ; : ! ? " & № % ())
     if not re.match(r'^[a-zA-Z][a-zA-Z0-9\-\.\,\;\:\!\?\"\&\№\%\(\) ]*$', title):
         if not title[0].isalpha():
@@ -31,11 +36,6 @@ def check_title(title):
     if re.search(r'([\-.,;:!?\"&№%()])(\s*\1)+', title):
         return "The title may not contain several special characters in a row"
     
-    # Подсчёт буквенных символов
-    letter_count = len(re.findall(r'[a-zA-Z]', title))
-    if letter_count < 4:
-        return "The title must contain at least 4 letters"
-    
     return True
 
 def check_author(author): 
@@ -43,8 +43,13 @@ def check_author(author):
     if len(author) > 255:
         return "The author's name must not exceed 255 characters"
     
+    # Подсчёт буквенных символов
+    letter_count = len(re.findall(r'[a-zA-Z]', author))
+    if letter_count < 4:
+        return "The author's name must contain at least 4 letters"
+    
     # Проверка на допустимые символы (англ буквы, -)
-    if not re.match(r'^[a-zA-Z][a-zA-Z\-]*$', author):
+    if not re.match(r'^[a-zA-Z][a-zA-Z\- ]*$', author):
         if author.startswith('-') or author.endswith('-'):
             return "The author's name cannot begin or end with -"
         return "The author's name can contain only English letters and a symbol -"
@@ -53,17 +58,17 @@ def check_author(author):
     if re.search(r'\-[\s\-]*\-', author):
         return "The author's name cannot contain several - in a row"
     
-    # Подсчёт буквенных символов
-    letter_count = len(re.findall(r'[a-zA-Z]', author))
-    if letter_count < 4:
-        return "The author's name must contain at least 4 letters"
-    
     return True
 
 def check_description(description):
     # Проверка длины (не больше 1023)
     if len(description) > 1023:
         return "The description must not exceed 1023 characters"
+
+    # Подсчёт буквенных символов
+    letter_count = len(re.findall(r'[a-zA-Z]', description))
+    if letter_count < 20:
+        return "The description must contain at least 20 letters"
     
     # Проверка на допустимые символы (англ буквы, цифры,  - . , ; : ! ? " & № % ())
     if not re.match(r'^[a-zA-Z][a-zA-Z0-9\-\.\,\;\:\!\?\"\&\№\%\(\) ]*$', description):
@@ -74,12 +79,7 @@ def check_description(description):
     # Проверка на повторение специальных символов
     if re.search(r'([\-.,;:!?\"&№%()])(\s*\1)+', description):
         return "The description cannot contain several special characters in a row."
-        
-    # Подсчёт буквенных символов
-    letter_count = len(re.findall(r'[a-zA-Z]', description))
-    if letter_count < 20:
-        return "The description must contain at least 20 letters"
-    
+            
     return True
 
 def add_article(title, author, description, link):
@@ -93,6 +93,8 @@ def add_article(title, author, description, link):
         
         # Проверка каждого поля и сбор ошибок
         errors = {}
+        if any(a['link'].strip().lower() == link.strip().lower() for a in articles):
+            errors['link'] = "An article with this link already exists"
         title_result = check_title(title)
         if title_result is not True:
             errors['title'] = title_result
