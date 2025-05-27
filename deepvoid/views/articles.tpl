@@ -1,6 +1,6 @@
 % rebase('layout.tpl', title=title, year=year)
 
-<!-- Ñåêöèÿ ñ çàãîëîâêîì è îïèñàíèåì êîìïàíèè -->
+<!-- Ð¡ÐµÐºÑ†Ð¸Ñ Ñ Ð·Ð°Ð³Ð¾Ð»Ð¾Ð²ÐºÐ¾Ð¼ Ð¸ Ð¾Ð¿Ð¸ÑÐ°Ð½Ð¸ÐµÐ¼ ÐºÐ¾Ð¼Ð¿Ð°Ð½Ð¸Ð¸ -->
 <div class="jumbotron">
 	<h1>Useful articles</h1>
 	<p class="lead">
@@ -11,7 +11,7 @@
     </p>
 </div>
 
-<!-- Êîíòåéíåð äëÿ òàáëèöû ñî ñïèñêîì ñòàòåé -->
+<!-- ÐšÐ¾Ð½Ñ‚ÐµÐ¹Ð½ÐµÑ€ Ð´Ð»Ñ Ñ‚Ð°Ð±Ð»Ð¸Ñ†Ñ‹ ÑÐ¾ ÑÐ¿Ð¸ÑÐºÐ¾Ð¼ ÑÑ‚Ð°Ñ‚ÐµÐ¹ -->
 <div class="table-container">
     <table>
         <thead>
@@ -23,13 +23,13 @@
             </tr>
         </thead>
         <tbody id="articles-body">
-            <!-- Åñëè îøèáêà åñòü, ïîêàçûâàåì å¸ -->
+            <!-- Ð•ÑÐ»Ð¸ Ð¾ÑˆÐ¸Ð±ÐºÐ° ÐµÑÑ‚ÑŒ, Ð¿Ð¾ÐºÐ°Ð·Ñ‹Ð²Ð°ÐµÐ¼ ÐµÑ‘ -->
             % if error:
                 <tr><td colspan="4">Error uploading articles: {{error}}</td></tr>
             % else:
                 % for article in articles:
                     <tr>
-                        <td><a href="{{article['link']}}" target="_blank" class="article-link">{{article['title']}}</a></td> <!-- Íàçâàíèå ñòàòüè êàê ññûëêà -->
+                        <td><a href="{{article['link']}}" target="_blank" class="article-link">{{article['title']}}</a></td> <!-- ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ ÑÑ‚Ð°Ñ‚ÑŒÐ¸ ÐºÐ°Ðº ÑÑÑ‹Ð»ÐºÐ° -->
                         <td>{{article['author']}}</td>
                         <td>{{article['description']}}</td>
                         <td>{{article['date']}}</td>
@@ -40,43 +40,43 @@
     </table>
 </div>
 
-<!-- Ôîðìà äëÿ äîáàâëåíèÿ íîâîé ñòàòüè -->
+<!-- Ð¤Ð¾Ñ€Ð¼Ð° Ð´Ð»Ñ Ð´Ð¾Ð±Ð°Ð²Ð»ÐµÐ½Ð¸Ñ Ð½Ð¾Ð²Ð¾Ð¹ ÑÑ‚Ð°Ñ‚ÑŒÐ¸ -->
 <div class="article-form">
     <h2>Add a new article</h2>
     % if 'general' in form_errors:
         <div class="field-validation-error">{{form_errors['general']}}</div>
     % end
-    <form method="POST" action="/articles"> <!-- Ôîðìà îòïðàâëÿåò äàííûå ìåòîäîì POST íà /articles -->
+    <form method="POST" action="/articles"> <!-- Ð¤Ð¾Ñ€Ð¼Ð° Ð¾Ñ‚Ð¿Ñ€Ð°Ð²Ð»ÑÐµÑ‚ Ð´Ð°Ð½Ð½Ñ‹Ðµ Ð¼ÐµÑ‚Ð¾Ð´Ð¾Ð¼ POST Ð½Ð° /articles -->
         <div class="form-row">
             <div class="form-group">
-                <!-- Íàçâàíèå -->
+                <!-- ÐÐ°Ð·Ð²Ð°Ð½Ð¸Ðµ -->
                 <label for="title">Title</label>
-                <input type="text" id="title" name="title" class="form-control" required>
+                <input type="text" id="title" name="title" class="form-control" required value="{{form_data.get('title','')}}">
                 % if 'title' in form_errors:
                     <span class="field-validation-error" style="color: #ff00dc">{{form_errors['title']}}</span>
                 % end
             </div>
             <div class="form-group">
-                <!-- Àâòîð -->
+                <!-- ÐÐ²Ñ‚Ð¾Ñ€ -->
                 <label for="author">Author</label>
-                <input type="text" id="author" name="author" class="form-control" required>
+                <input type="text" id="author" name="author" class="form-control" required value="{{form_data.get('author','')}}">
                 % if 'author' in form_errors:
                     <span class="field-validation-error" style="color: #ff00dc">{{form_errors['author']}}</span>
                 % end
             </div>
         </div>
         <div class="form-group">
-            <!-- Îïèñàíèå -->
+            <!-- ÐžÐ¿Ð¸ÑÐ°Ð½Ð¸Ðµ -->
             <label for="description">Description</label>
-            <textarea id="description" name="description" class="form-control" rows="3" required></textarea>
+            <textarea id="description" name="description" class="form-control" rows="3" required>{{!form_data.get('description','')}}</textarea>
             % if 'description' in form_errors:
                 <span class="field-validation-error" style="color: #ff00dc">{{form_errors['description']}}</span>
             % end
         </div>
         <div class="form-group">
-            <!-- Ññûëêà -->
+            <!-- Ð¡ÑÑ‹Ð»ÐºÐ° -->
             <label for="link">Link</label>
-            <input type="url" id="link" name="link" class="form-control" required>
+            <input type="url" id="link" name="link" class="form-control" required value="{{form_data.get('link','')}}">
         </div>
         <button type="submit" class="btn btn-primary">Add article</button>
     </form>

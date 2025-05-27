@@ -451,6 +451,11 @@ h1 {
             text-decoration: underline;
         }
 
+    .table-container td:nth-child(4),
+    .table-container th:nth-child(4) {
+        white-space: nowrap; /* Запрет на перенос */
+    }
+
 /* Стили для скроллбара */
 .table-container::-webkit-scrollbar {
     width: 8px;

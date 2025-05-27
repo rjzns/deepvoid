@@ -2,10 +2,10 @@ import json
 
 def load_articles():
     try:
-        # Попытка открыть файл './static/texts/articles.json' в режиме чтения ('r') с кодировкой UTF-8.
+        # РџРѕРїС‹С‚РєР° РѕС‚РєСЂС‹С‚СЊ С„Р°Р№Р» './static/texts/articles.json' РІ СЂРµР¶РёРјРµ С‡С‚РµРЅРёСЏ ('r') СЃ РєРѕРґРёСЂРѕРІРєРѕР№ UTF-8.
         with open('./static/texts/articles.json', 'r', encoding='utf-8') as file:
-            articles = json.load(file) # Чтение содержимого файла и преобразование JSON-данных в объект Python
-        # Если файл успешно прочитан, возвращается словарь с ключом 'articles'
+            articles = json.load(file) # Р§С‚РµРЅРёРµ СЃРѕРґРµСЂР¶РёРјРѕРіРѕ С„Р°Р№Р»Р° Рё РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёРµ JSON-РґР°РЅРЅС‹С… РІ РѕР±СЉРµРєС‚ Python
+        # Р•СЃР»Рё С„Р°Р№Р» СѓСЃРїРµС€РЅРѕ РїСЂРѕС‡РёС‚Р°РЅ, РІРѕР·РІСЂР°С‰Р°РµС‚СЃСЏ СЃР»РѕРІР°СЂСЊ СЃ РєР»СЋС‡РѕРј 'articles'
         return {'articles': articles}
     except Exception as e:
         return {'error': str(e)}

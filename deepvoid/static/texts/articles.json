@@ -1,23 +1,58 @@
 [
   {
-    "title": "About electric guitars",
+    "title": "The Role of Lasers in Modern Club Shows",
+    "author": "Victor Barnes",
+    "description": "An exploration of how laser lighting systems are used in modern clubs to create dynamic visual effects and enhance audience engagement.",
+    "date": "2025-05-27",
+    "link": "https://example.com/laser-lighting-clubs"
+  },
+  {
+    "title": "About Electric Guitars",
     "author": "Anna Yakovleva",
-    "description": "So much to say..",
+    "description": "A brief overview of electric guitars and their role in modern live performances.",
     "date": "2025-05-26",
     "link": "https://www.legato.su/articles/ob-ehlektrogitarah/"
   },
   {
-    "title": "Освещение сцены",
-    "author": "Анна Иванова",
-    "description": "Как выбрать правильное освещение для мероприятий",
+    "title": "LED vs Traditional Lighting",
+    "author": "John Matthews",
+    "description": "A comparison of LED and conventional lighting technologies for stage use, including energy efficiency and performance.",
+    "date": "2025-05-20",
+    "link": "https://example.com/led-vs-traditional"
+  },
+  {
+    "title": "Stage Lighting: Key Principles",
+    "author": "Anna Ivanova",
+    "description": "How to choose the right lighting setup for events and concerts to enhance atmosphere and visibility.",
     "date": "2025-05-01",
     "link": "https://example.com/stage-lighting"
   },
   {
-    "title": "Звук и эмоции",
-    "author": "Мария Петрова",
-    "description": "Влияние качественного звука на восприятие",
+    "title": "Creating Immersive Club Environments",
+    "author": "Sophie Lee",
+    "description": "Design strategies for combining sound, lighting, and visuals to transform club spaces into unforgettable experiences.",
+    "date": "2025-04-28",
+    "link": "https://example.com/immersive-club-design"
+  },
+  {
+    "title": "Sound and Emotions",
+    "author": "Maria Petrova",
+    "description": "Exploring the psychological impact of high-quality sound on the audience's emotional response.",
     "date": "2025-04-15",
     "link": "https://example.com/sound-emotions"
+  },
+  {
+    "title": "DMX Lighting Control for Beginners",
+    "author": "Emily Scott",
+    "description": "A beginner-friendly guide to using DMX lighting controllers in live event settings.",
+    "date": "2025-04-05",
+    "link": "https://example.com/dmx-guide"
+  },
+  {
+    "title": "Understanding Stage Acoustics",
+    "author": "Mark Reynolds",
+    "description": "An introduction to stage acoustics and how proper planning can improve sound clarity and reduce unwanted noise.",
+    "date": "2025-03-30",
+    "link": "https://example.com/stage-acoustics"
   }
 ]
