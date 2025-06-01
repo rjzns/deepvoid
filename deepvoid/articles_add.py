@@ -16,6 +16,72 @@ def normalize_date(date_str):
         # Если не удалось распарсить, возвращаем текущую дату
         return datetime.now().strftime("%Y-%m-%d")
 
+def check_title(title):
+    # Проверка длины (не больше 255)
+    if len(title) > 255:
+        return "The title must not exceed 255 characters"
+    
+    # Подсчёт буквенных символов
+    letter_count = len(re.findall(r'[a-zA-Z]', title))
+    if letter_count < 4:
+        return "The title must contain at least 4 letters"
+    
+    # Проверка на допустимые символы (англ буквы, цифры, - . , ; : ! ? " & № % ())
+    if not re.match(r'^[a-zA-Z][a-zA-Z0-9\-\.\,\;\:\!\?\"\&\№\%\(\) ]*$', title):
+        if not title[0].isalpha():
+            return "The title must begin with the letter"
+        return "The title can contain only English letters, numbers, and symbols: - . , ; : ! ? \" & № % ( )"
+    
+    # Проверка на повторение специальных символов
+    if re.search(r'([\-.,;:!?\"&№%()])(\s*\1)+', title):
+        return "The title may not contain several special characters in a row"
+    
+    return True
+
+def check_author(author): 
+    # Проверка длины (не больше 255)
+    if len(author) > 255:
+        return "The author's name must not exceed 255 characters"
+    
+    # Подсчёт буквенных символов
+    letter_count = len(re.findall(r'[a-zA-Z]', author))
+    if letter_count < 4:
+        return "The author's name must contain at least 4 letters"
+    
+    # Проверка на допустимые символы (англ буквы, -)
+    if not re.match(r'^[a-zA-Z][a-zA-Z\- ]*$', author):
+        if author.startswith('-') or author.endswith('-'):
+            return "The author's name cannot begin or end with -"
+        return "The author's name can contain only English letters and a symbol -"
+    
+    # Проверка на несколько - рядом (включая через пробел)
+    if re.search(r'\-[\s\-]*\-', author):
+        return "The author's name cannot contain several - in a row"
+    
+    return True
+
+def check_description(description):
+    # Проверка длины (не больше 1023)
+    if len(description) > 1023:
+        return "The description must not exceed 1023 characters"
+
+    # Подсчёт буквенных символов
+    letter_count = len(re.findall(r'[a-zA-Z]', description))
+    if letter_count < 20:
+        return "The description must contain at least 20 letters"
+    
+    # Проверка на допустимые символы (англ буквы, цифры,  - . , ; : ! ? " & № % ())
+    if not re.match(r'^[a-zA-Z][a-zA-Z0-9\-\.\,\;\:\!\?\"\&\№\%\(\) ]*$', description):
+        if not description[0].isalpha():
+            return "The description must begin with the letter"
+        return "The description can contain only English letters, numbers, and symbols: - . , ; : ! ? \" & № % ( )"
+    
+    # Проверка на повторение специальных символов
+    if re.search(r'([\-.,;:!?\"&№%()])(\s*\1)+', description):
+        return "The description cannot contain several special characters in a row."
+            
+    return True
+
 def add_article(title, author, description, link):
     try:
         # Чтение текущих статей из файла
@@ -25,6 +91,26 @@ def add_article(title, author, description, link):
         except FileNotFoundError:
             articles = []  # Если файла нет, начинаем с пустого списка
         
+        # Проверка каждого поля и сбор ошибок
+        errors = {}
+        if any(a['link'].strip().lower() == link.strip().lower() for a in articles):
+            errors['link'] = "An article with this link already exists"
+        title_result = check_title(title)
+        if title_result is not True:
+            errors['title'] = title_result
+        
+        author_result = check_author(author)
+        if author_result is not True:
+            errors['author'] = author_result
+        
+        description_result = check_description(description)
+        if description_result is not True:
+            errors['description'] = description_result
+        
+        # Если есть ошибки, возвращаем их
+        if errors:
+            return {'success': False, 'errors': errors}
+
         # Формирование новой статьи
         new_article = {
             "title": title,
@@ -37,7 +123,7 @@ def add_article(title, author, description, link):
         # Добавление новой статьи в список
         articles.append(new_article)
 
-        # Приводим все даты к единому формату перед сортировкой
+        # Приведение всех дат к единому формату перед сортировкой
         for article in articles:
             article['date'] = normalize_date(article['date'])
         
@@ -48,7 +134,6 @@ def add_article(title, author, description, link):
         with open('./static/texts/articles.json', 'w', encoding='utf-8') as file:
             json.dump(articles, file, ensure_ascii=False, indent=2)
         
-        return True  # Успешно добавлено
+        return {'success': True} # Успешно добавлено
     except Exception as e:
-        print(f"Ошибка при добавлении статьи: {str(e)}")
-        return False  # Ошибка при добавлении
+        return {'success': False, 'errors': {'general': f"Error adding an article: {str(e)}"}}

@@ -5,7 +5,15 @@ from articles_add import add_article
 # Страница со статьями
 @bottle.route('/articles', method=['GET', 'POST'])
 def articles():
-    message = None  # Для хранения сообщения при добавлении
+    # Статьи для отображения
+    data = load_articles()
+    articles = data.get('articles', []) if 'articles' in data else []
+    error = data.get('error', None)
+
+    # Ошибки для формы (по умолчанию пустой словарь)
+    form_errors = {}
+
+    form_data = {'title': '', 'author': '', 'description': '', 'link': ''}  # Значения по умолчанию
 
     if bottle.request.method == 'POST':
         # Получение данных из формы
@@ -13,21 +21,31 @@ def articles():
         author = bottle.request.forms.get('author')
         description = bottle.request.forms.get('description')
         link = bottle.request.forms.get('link')
+
+        # Сохранение введённых данных, чтобы вернуть в шаблон при ошибках
+        form_data = {
+            'title': title,
+            'author': author,
+            'description': description,
+            'link': link
+        }
         
         # Добавление статьи
-        success = add_article(title, author, description, link)
+        result = add_article(title, author, description, link)
         
-        if success:
-            message = "Article added successfully"
+        if result['success']:
+            # Если успешно, перенаправление на ту же страницу, чтобы обновить таблицу
+            form_data = {'title': '', 'author': '', 'description': '', 'link': ''}
+            form_errors = {}
+            data = load_articles()
+            articles = data.get('articles', [])
         else:
-            message = "Failed to add article. Please try again"
+            # Если есть ошибки, передача их в шаблон
+            form_errors = result.get('errors', {})
     
-    # Загрузка статей (либо после добавления, либо при GET-запросе)
-    data = load_articles()
-    # Проверка, что data — это словарь, и articles — список
-    if not isinstance(data, dict):
-        data = {'error': 'Invalid data format from load_articles', 'articles': []}
-    articles = data.get('articles', []) if 'articles' in data else []
-    error = data.get('error', None)
-    # Рендер шаблона с обновлёнными данными
-    return bottle.template('articles', title='Useful articles', year=2025, articles=articles, error=error, message=message)
+    return bottle.template('articles', 
+                           title='Useful articles', 
+                           year=2025, articles=articles, 
+                           error=error, 
+                           form_errors=form_errors,
+                           form_data=form_data)
